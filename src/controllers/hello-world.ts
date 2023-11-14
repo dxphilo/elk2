@@ -7,7 +7,7 @@ const router = Router();
 function helloWorld(req: Request, res: Response): void {
     const token = uuidv4();
     const expire = req.query.expire || Math.floor(Date.now() / 1000) + 2400;
-    const privateAPIKey = 'your_private_key';
+    const privateAPIKey = 'private_Ji6qXhiZ1ziZpvYb5xcaj/NhxTU=';
     const signature = crypto
         .createHmac('sha1', privateAPIKey)
         .update(`${token}${expire}`)
